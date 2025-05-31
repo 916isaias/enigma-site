@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Entrada Secreta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #0f0;
+            text-align: center;
+            margin-top: 100px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #0f0;
+            background: #000;
+            color: #0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+            background: #0f0;
+            color: #000;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0a0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🔒 Entrada Secreta</h1>
+    <p>Digite a senha para acessar o dossiê do Deus Caído:</p>
+
+    <input type="password" id="senha" placeholder="Digite a senha aqui" />
+    <button onclick="verificarSenha()">Entrar</button>
+
+    <script>
+    function verificarSenha() {
+        const senha = document.getElementById('senha').value.trim();
+        if (senha === 'LUZ NEGRA DESPERTA') {
+            // Se a senha estiver correta, redireciona para a página secreta
+            window.location.href = 'secreta.html';
+        } else {
+            alert('❌ Senha incorreta! Tente novamente.');
+            document.getElementById('senha').value = '';
+            document.getElementById('senha').focus();
+        }
+    }
+    </script>
+
+</body>
+</html>
